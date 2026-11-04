@@ -38,7 +38,7 @@ This project simulates and detects suspicious PowerShell activity on a Windows s
 Introduce the basics of log analysis and simulate detection of PowerShell events using Windows Event Viewer.
 
 ## 📖 What is a Log?
-A log is a record of system activity including:
+A log is a record of system activity, including:
 - **Timestamp**
 - **Event Description**
 - **Severity**
@@ -56,10 +56,10 @@ Logs are used in **forensics, incident response**, and **compliance**.
 Simulate suspicious PowerShell activity and detect it using Event Viewer.
 
 ## 📸 Screenshot of Detected Event
-![PowerShell Event](images/Log Analysis.png)
+![PowerShell Event](Images/Log%20Analysis.png)
 
 ## 🧠 Observations & Learnings
-See [`lab/observations.md`](lab/observations.md) for a summary of what I learned during the lab.
+See [Lab Observations](Lab/observations.md) for my investigation findings and lessons learned.
 
 ---
 
