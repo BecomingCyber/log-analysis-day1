@@ -2,7 +2,7 @@
 
 ## 🔍 What Did I Observe?
 
-#### Failed Login (Event ID 4625):
+### Failed Login (Event ID 4625):
 
 I simulated a failed login attempt by using an invalid password for the haxuser1 account.
 The Security Log captured this attempt under Event ID 4625.
@@ -15,17 +15,26 @@ Details included:
 
 - Logon Type: 3 (network logon)
 
-#### Successful Login (Event ID 4624):
+### Successful Logon (Event ID 4624)
 
-After a successful login, Event Viewer recorded a successful login event with Event ID 4624.
+I reviewed Windows Security Event ID 4624, which records a successful logon.
 
-Details included:
+The captured event included:
 
-- Logon Type: 2 (interactive login)
+- **Event ID:** 4624
+- **Logon Type:** 7 (Workstation Unlock)
+- **Authentication Package:** Negotiate
+- **Workstation:** DESKTOP-O13BV2L
 
-- Authentication Package: NTLM
+**Investigation Finding:**
 
-#### Account Lockout (Event ID 4740):
+The event indicates that an existing Windows session was unlocked. Although Event ID 4624 records successful authentication activity, the Logon Type provides important context about the action performed.
+
+**What I Learned:**
+
+A successful logon event does not always represent a new interactive sign-in. Examining the Logon Type and authentication details helps distinguish different types of account activity and prevents incorrect conclusions during an investigation.
+
+### Account Lockout (Event ID 4740):
 
 After multiple failed login attempts with the wrong password, the `haxuser1` account was locked.
 Event Viewer recorded this event under Event ID 4740.
