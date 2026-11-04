@@ -28,3 +28,26 @@ This lab focuses on analyzing Windows Security Logs to detect critical security 
 
 ---
 ✅ **Lab Completed Successfully**
+
+---
+
+## 🔎 Investigation Evidence
+
+The following screenshots document Windows Security events examined during this controlled authentication lab.
+
+| Event ID | Evidence | Investigation Finding |
+|---|---|---|
+| 4625 | [Failed Logon Screenshot](images/Event%20ID%204625%20%28Failed%20Logon%29.png) | Failed network logon involving `haxuser1`, with an incorrect-password substatus. |
+| 4624 | [Successful Logon Screenshot](images/4624%20Successful%20Login.png) | Successful workstation unlock (Logon Type 7) using the Negotiate authentication package. |
+| 4740 | [Account Lockout Screenshot](images/Event%20ID%204740%20%28002%29.png) | Account lockout recorded for `haxuser1`. |
+
+### Investigation Documentation
+
+- [Review My Investigation Findings and Observations](lab/observations.md)
+- [Review the Windows Lab Setup](lab/windows-setup.md)
+
+### Key Takeaway
+
+This lab helped me practice examining Windows authentication events, interpreting event details, and documenting findings based on available evidence.
+
+The events were generated during a controlled lab. Although failed authentication attempts and account lockouts can indicate suspicious activity, you need additional context before concluding that an actual attack occurred.
